@@ -28,11 +28,15 @@ const config: Config = {
         'subtitle-1': '24px',
         'subtitle-2': '20px',
 
-        'paragraph-1': '18px',
+        'paragraph-1': '22px',
         'paragraph-2': '16px',
 
-        'caption': '12px',
+        'caption': '14px',
 
+      },
+      maxWidth: {
+        hero: '1014px',
+        'hero-inner': '785px',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

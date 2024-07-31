@@ -1,24 +1,40 @@
-'use client'
+'use client';
 import Heading from '@/components/common/text/heading';
 import Subtitle from '@/components/common/text/subtitle';
 import Paragraph from '@/components/common/text/paragraph';
-import React from 'react'
+import React from 'react';
 import Caption from '@/components/common/text/caption';
+import GradientHeader from '@/components/common/text/gradientHeader';
+
+const copy = {
+  hero: {
+    caption: 'Meet Coco!',
+    header: 'Your Space for Thoughts and Feelings',
+    body: 'Unlock the power of your thoughts with Coco, the journaling app that helps you understand yourself better. With Coco, you can effortlessly track your moods, identify triggering keywords, and receive personalized advice to improve your well-being.',
+  },
+};
 
 function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-left p-24">
-      <Heading text="This is Heading 1" type={1} theme={1} />
-      <Heading text="This is Heading 2" type={2} />
-      <Heading text="This is Heading 3" type={3} />
-      <Heading text="This is Heading 4" type={4} />
-
-      <Subtitle text="This is Subtitle 1" type={1} theme={1} />
-      <Subtitle text="This is Subtitle 2" type={2} />
-      <Paragraph text="This is Paragraph 1" type={1} theme={1} />
-      <Paragraph text="This is Paragraph 2" type={2} />
-
-      <Caption text="This is Caption" theme={1} />
+    <main className="flex min-h-screen flex-col items-center p-24 ">
+      <div className="max-w-hero flex flex-col items-center ">
+        <div className="max-w-hero-inner flex flex-col items-center pt-24">
+          <Caption 
+            text={copy.hero.caption} 
+            style="text-center"
+          />
+          <GradientHeader
+            text={copy.hero.header}
+            style="text-center"
+            theme={1}
+          />
+        </div>
+        <Paragraph 
+          text={copy.hero.body} 
+          style="text-justify pt-1" 
+          type={1} 
+        />
+      </div>
     </main>
   );
 }
