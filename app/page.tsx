@@ -14,6 +14,7 @@ const copy = {
 };
 
 function Home() {
+  
   return (
     <>
       <Navbar />

@@ -12,7 +12,7 @@ function SampleButton({
   return (
     <button 
       onClick={onClick}
-      className='btn btn-neutral'>
+      className='btn btn-primary'>
       {title || 'Sample Button'}
     </button>
   )
