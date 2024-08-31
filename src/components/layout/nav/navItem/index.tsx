@@ -27,7 +27,7 @@ export default function NavItem({
   return (
     <button
       onClick={handleClick}
-      className={`link ${(!isActive && 'link-hover') || (isActive && 'underline-offset-4 underline')} flex flex-row justify-center items-center gap-1`}
+      className={`link ${(!isActive && 'link-hover underline-offset-4') || (isActive && 'underline-offset-4 underline')} flex flex-row justify-center items-center gap-1`}
     >
       {icon}
       {text}
