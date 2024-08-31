@@ -1,10 +1,9 @@
 'use client';
-import Heading from '@/components/common/text/heading';
-import Subtitle from '@/components/common/text/subtitle';
-import Paragraph from '@/components/common/text/paragraph';
+
 import React from 'react';
-import Caption from '@/components/common/text/caption';
-import GradientHeader from '@/components/common/text/gradientHeader';
+
+import { Paragraph, Caption, GradientHeader } from '@/components/common/text';
+import Navbar from '@/components/layout/nav';
 
 const copy = {
   hero: {
@@ -16,26 +15,30 @@ const copy = {
 
 function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 ">
-      <div className="max-w-hero flex flex-col items-center ">
-        <div className="max-w-hero-inner flex flex-col items-center pt-24">
-          <Caption 
-            text={copy.hero.caption} 
-            style="text-center"
-          />
-          <GradientHeader
-            text={copy.hero.header}
-            style="text-center"
-            theme={1}
+    <>
+      <Navbar />
+      <main className="flex min-h-screen flex-col items-center p-24 ">
+        
+        <div className="max-w-hero flex flex-col items-center ">
+          <div className="max-w-hero-inner flex flex-col items-center pt-24">
+            <Caption 
+              text={copy.hero.caption} 
+              style="text-center"
+            />
+            <GradientHeader
+              text={copy.hero.header}
+              style="text-center"
+              theme={1}
+            />
+          </div>
+          <Paragraph 
+            text={copy.hero.body} 
+            style="text-justify pt-1" 
+            type={1} 
           />
         </div>
-        <Paragraph 
-          text={copy.hero.body} 
-          style="text-justify pt-1" 
-          type={1} 
-        />
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
 
