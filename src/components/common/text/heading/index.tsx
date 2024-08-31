@@ -32,7 +32,7 @@ export default function Heading({
     fontSize = 'text-heading-4';
     weight = 'font-semi-bold';
   } else if (type === 5) {
-    fontSize = 'text-lg';
+    fontSize = 'text-md';
     weight = 'font-medium';
   }
 
