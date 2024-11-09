@@ -4,6 +4,7 @@ import React from 'react';
 
 import { Paragraph, Caption, GradientHeader } from '@/components/common/text';
 import Navbar from '@/components/layout/nav';
+import Footer from '@/components/layout/footer';
 
 const copy = {
   hero: {
@@ -14,6 +15,7 @@ const copy = {
 };
 
 function Home() {
+  
   return (
     <>
       <Navbar />
@@ -38,6 +40,7 @@ function Home() {
           />
         </div>
       </main>
+      <Footer />
     </>
   );
 }

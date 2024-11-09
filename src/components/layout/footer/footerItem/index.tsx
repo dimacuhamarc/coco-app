@@ -4,21 +4,16 @@ import React, { ReactElement } from 'react';
 import { useState, useEffect } from 'react';
 import { useCreateRouter } from '@/utils/helpers/nav';
 
-export default function NavItem({
-  icon = <>React Icon Component</>,
+export default function FooterItem({
+  style = 'text-t-dark',
   text = 'Text',
   route = '/',
 }: {
-  icon: ReactElement;
+  style?: string;
   text: string;
   route: string;
 }) {
-  const [isActive, setIsActive] = useState(false);
   const { pathname, navToRoute } = useCreateRouter();
-
-  useEffect(() => {
-    setIsActive(pathname === route);
-  }, [pathname, route]);
 
   const handleClick = () => {
     navToRoute(route)
@@ -27,9 +22,8 @@ export default function NavItem({
   return (
     <button
       onClick={handleClick}
-      className={`link ${(!isActive && 'link-hover underline-offset-4') || (isActive && 'underline-offset-4 underline')} flex flex-row justify-center items-center gap-1`}
+      className={`${style} link link-hover underline-offset-4 flex flex-row items-center gap-1`}
     >
-      {icon}
       {text}
     </button>
   );

@@ -5,7 +5,7 @@ const CTA_LINKS = [
     title: 'Sign In',
     route: '/sign-in',
     isButton: false,
-    style: 'link link-hover',
+    style: 'link link-hover underline-offset-4',
   },
   {
     title: 'Try it free',
